@@ -1,16 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <!-- start head page -->
+
+    <!-- meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to-do-app</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <!-- title page -->
+    <title>To Do List App</title>
     
+    <!-- css links -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head> <!-- end head page -->
 
+<body> <!-- start body page -->
+    <div class="container"> <!-- start container page -->
+        <header class="header" id="header"> <!-- start header page -->
+            <div class="refresh clear">
+                <i class="fa fa-refresh"></i>
+            </div>
+
+            <div class="date" id="date"></div>
+        </header> <!-- start header page -->
+
+        <main class="main" id="main"> <!-- start main page --> 
+            <section class="task-list">
+                <h2>Tasks</h2>
+    
+                <div id="tasks">
+    
+                    <!-- <div class="task">
+                        <i class="fa fa-circle-thin"></i>
+                        <div class="content">
+                            <input 
+                                type="text" 
+                                class="text" 
+                                value="A new task"
+                                readonly>
+                        </div>
+                        <div class="actions">
+                            <button class="edit">
+                                <i class="fa-regular fa-pen"></i>
+                            </button>
+
+                            <button class="delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div> -->
+    
+                </div>
+            </section>
+
+            <section>
+                <form id="new-task-form">
+                    <input 
+                        type="text" 
+                        name="new-task-input" 
+                        id="new-task-input" 
+                        placeholder="Add Your Task" />
+
+                    <button id="add-new-task">
+                        <i class="fa fa-plus-circle"></i>
+                    </button>
+                </form>
+            </section>
+        </main> <!-- end main page -->
+    </div> <!-- end container page -->
+    
+    <!-- script links -->
     <script src="./js/app.js"></script>
-</body>
+</body> <!-- end body page -->
 </html>

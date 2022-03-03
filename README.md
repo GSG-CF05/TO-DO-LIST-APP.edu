@@ -27,4 +27,9 @@
 
 🔥 Dev. Mai ELhajeen.👩‍💻
 
-:link:check the link: [TO-DO-LIST-App](https://gsg-cf05.github.io/TO-DO-LIST-APP.edu/).
+:link:check the figma link: [Visit Figma Design](https://www.figma.com/file/SvBex7eTunKnTSJCgmOu3N/TO-DO-APP)
+
+:link:check the app link: [TO-DO-LIST-App](https://gsg-cf05.github.io/TO-DO-LIST-APP.edu/).
+
+## Look at mu UI TO DO APP🖼️
+![Look at my UI TO DO APP](https://i.imgur.com/4uzlQbr.png)

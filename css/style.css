@@ -57,7 +57,7 @@ button{
     padding: 16px;
     position: relative;
 }
-.refresh.clear{
+.refresh.clear, .darkMode {
     text-align: left;
     font-size: 24px;
     transition: all .3s ease;

@@ -1,0 +1,14 @@
+:root{
+    --primary-color: #e7e7e7;
+    --secondary-color: #4d4d4d;
+    --bg-primary-color: linear-gradient(14deg, #1f8797, #e5f2f300);
+}
+
+.dark-theme{
+    --primary-color: #676767;
+    --secondary-color: #e7e7e7;
+    --bg-primary-color: linear-gradient(14deg, #1c1c1c, #e5f2f300);
+}
+body{
+    background: var(--bg-primary-color);
+}

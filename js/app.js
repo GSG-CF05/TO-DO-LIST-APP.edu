@@ -33,8 +33,6 @@ const today = new Date();
 
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
-
-
 // ****************** main Elements ******************
 const form = document.querySelector('#new-task-form');
 const input = document.querySelector('#new-task-input');

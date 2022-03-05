@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --primary-color: #e7e7e7;
     --secondary-color: #4d4d4d;
@@ -10,5 +17,143 @@
     --bg-primary-color: linear-gradient(14deg, #1c1c1c, #e5f2f300);
 }
 body{
+    width: 100%;
+    height: auto;
+    margin: 32px 0;
     background: var(--bg-primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.lineThrough{
+    text-decoration: line-through;
+    color : #57D28D;
+}
+input{
+    border: none;
+    outline: none;
+}
+button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.container{
+    height: auto;
+}
+
+.header {
+    background-image: url(../img/To\ do\ list-cuate.png);
+    background-position: center;
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 180px;
+    border-radius: 24px 24px 0 0;
+    padding: 16px;
+    position: relative;
+}
+.refresh.clear{
+    text-align: left;
+    font-size: 24px;
+    transition: all .3s ease;
+    color: var(--secondary-color);
+}
+i.fa.fa-refresh:hover{
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+div.date{
+    position: absolute;
+    bottom: 16px;
+    font-size: 24px;
+    color: var(--secondary-color);
+}
+
+h2{
+    color: var(--secondary-color);
+}
+.task-list{
+    width: 100%;
+    height: 350px;
+    max-height:350px;
+    background-color: var(--primary-color);
+    overflow: auto;
+    padding: 16px;
+}
+form#new-task-form{
+    background: var(--primary-color);
+    padding: 16px;
+    border-radius: 0 0 24px 24px;
+}
+input#new-task-input {
+    width: 80%;
+    height: 47px;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 50px;
+}
+
+button#add-new-task{
+    width: 16%;
+    cursor: pointer;
+}
+i.ri-add-line {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0px, 15px);
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #757575;
+}
+i.fa.fa-check-circle {
+    color: #57D28D;
+    cursor: pointer;
+}
+.task{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 8px 0;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+.checkbox {
+    font-size: 24px;
+    color: #57D28D;
+    padding-right: 8px;
+    cursor: pointer;
+}
+input.text {
+    height: 28px;
+    font-size: 16px;
+    width: 130px;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
+
+button.edit{
+    font-size: 18px;
+    padding: 0 5px;
+    color: #6839df;
+}
+button.delete{
+    font-size: 18px;
+    padding: 0 5px;
+    color: #E36864;
+}
+i.fa.fa-check {
+    color: #3453a7;
 }

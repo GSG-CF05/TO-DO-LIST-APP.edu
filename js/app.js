@@ -89,13 +89,6 @@ form.addEventListener('submit', (e) => {
 	const task_actions_el = document.createElement('div');
 	task_actions_el.classList.add('actions');
 	
-    // delete();
-	const task_delete_el = document.createElement('button');
-	task_delete_el.innerHTML = '<i class="fa fa-trash"></i>';
-	task_delete_el.classList.add('delete');
-
-    task_actions_el.appendChild(task_delete_el);
-
 	// edit();
 	const task_edit_el = document.createElement('button');
 	task_edit_el.innerHTML = '<i class="fa fa-pencil"></i>';
@@ -103,6 +96,13 @@ form.addEventListener('submit', (e) => {
 
 	task_actions_el.appendChild(task_edit_el);
 	task_el.appendChild(task_actions_el);
+
+    // delete();
+	const task_delete_el = document.createElement('button');
+	task_delete_el.innerHTML = '<i class="fa fa-trash"></i>';
+	task_delete_el.classList.add('delete');
+
+    task_actions_el.appendChild(task_delete_el);
 
 	list_el.appendChild(task_el);
 

@@ -9,7 +9,7 @@ clear.addEventListener("click", function(){
 // ------------------ Dark and Light mode theme
 const darkMode = document.createElement('div');
 darkMode.innerHTML = '<i class="ri-moon-fill"></i>'; // add moon icons in page
-darkMode.classList.add('dark-mode-icon')
+darkMode.classList.add('dark-mode-icon');
 
 const header = document.getElementById('header');
 header.appendChild(darkMode); // add the moon icon in header
@@ -65,10 +65,15 @@ let addTaskBtn = document.getElementById('add-new-task');
 let taskArray = [];
 
 document.addEventListener('DOMContentLoaded', getLocalStorage);
-function getLocalStorage () {
-	taskArray = JSON.parse(localStorage.getItem('tasks'));
-	taskArray.forEach(element => {
-		// Add new task in input value
+function getLocalStorage (){
+	if (localStorage.getItem('tasks')){
+		console.log('mai');
+		taskArray = JSON.parse(localStorage.getItem('tasks'));
+		console.log(tasks);
+	}
+
+	taskArray.forEach( (task) =>{
+			// Add new task in input value
 		const task_el = document.createElement('div');
 		task_el.classList.add('task');
 			
@@ -99,7 +104,7 @@ function getLocalStorage () {
 		const task_input_el = document.createElement('input');
 		task_input_el.classList.add('text');
 		task_input_el.type = 'text';
-		task_input_el.value = element;
+		task_input_el.value = task;
 		task_input_el.setAttribute('readonly', 'readonly');
 
 		task_content_el.appendChild(task_input_el);
@@ -141,19 +146,19 @@ function getLocalStorage () {
 			list_el.removeChild(task_el);
 		});
 
-		input.value = '';
-
-		task_delete_el.addEventListener('click', deleteFromLocalStorage);
-	
-		function deleteFromLocalStorage(a){
-			const index = taskArray.indexOf(task_input_el.value);
-			taskArray.splice(index, 1);
-			localStorage.setItem("tasks", JSON.stringify(taskArray));
-		}
-	});
+			
+			task_delete_el.addEventListener('click', deleteFromLocalStorage);
+			function deleteFromLocalStorage(a){
+				console.log('delete method');
+				const index = taskArray.indexOf(task);
+				console.log(index, task, 'yaqoot');
+				taskArray.splice(index, 1);
+				localStorage.setItem("tasks", JSON.stringify(taskArray));
+			}
+	})
 }
 
-addTaskBtn.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const task = input.value;
@@ -239,14 +244,13 @@ addTaskBtn.addEventListener('submit', (e) => {
 
 	input.value = '';
 
-	task_delete_el.addEventListener('click', deleteFromLocalStorage);
-
 	function setDataToLocalStorage(){
 		taskArray.push(task_input_el.value);
 		localStorage.setItem("tasks", JSON.stringify(taskArray));
 	}
 	setDataToLocalStorage();
 
+	task_delete_el.addEventListener('click', deleteFromLocalStorage);
 	function deleteFromLocalStorage(a){
 		const index = taskArray.indexOf(task_input_el.value);
 		taskArray.splice(index, 1);
